@@ -4,6 +4,7 @@ include(CheckCCompilerFlag)
 include(CheckIncludeFile)
 include(CheckSymbolExists)
 include(ExternalProject)
+include(GNUInstallDirs)
 find_package(PkgConfig REQUIRED)
 
 set(binary replay-sorcery)
@@ -224,7 +225,7 @@ endif()
 install(TARGETS ${binary} DESTINATION bin PERMISSIONS ${permissions})
 
 # Install config
-install(FILES sys/replay-sorcery.conf DESTINATION etc)
+install(FILES sys/replay-sorcery.conf DESTINATION /etc)
 
 # Install services
 set(RS_SYSTEMD_DIR /usr/lib/systemd CACHE STRING "Where to install the systemd services")
