@@ -24,6 +24,7 @@
 #include <libavcodec/avcodec.h>
 #include <libavutil/avutil.h>
 #include <libavutil/bprint.h>
+#include <libavutil/channel_layout.h>
 #include <libavutil/time.h>
 
 #ifdef RS_BUILD_PULSE_FOUND
